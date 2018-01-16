@@ -13,7 +13,13 @@ function processData(input) {
             queries.push(inputArray[i]);
         }
     }
-console.log(queries);
+    for (var x = 0; x<queries.length; x++){
+        if(phoneBook[queries[x]] === undefined){
+            console.log("Not found");
+        }else{
+        console.log(queries[x] + "=" + phoneBook[queries[x]]);
+        }
+    }
 } 
 
 process.stdin.resume();
