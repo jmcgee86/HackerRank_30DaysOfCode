@@ -24,17 +24,20 @@ function main() {
     var d = 4.0;
     var s = "HackerRank";
 
-  // Declare second integer, double, and String variables.
-var secondInt, double, string;
+
+// Declare second integer, double, and String variables.
+var secondInt, double, string
     // Read and save an integer, double, and String to your variables.
-secondInt = readLine();
-double = readLine();
-string = readLine();
+secondInt = readLine()
+double = readLine()
+string = readLine()
     // Print the sum of both integer variables on a new line.
-console.log(parseInt(secondInt) + i);
+console.log(parseInt(secondInt) +i);
     // Print the sum of the double variables on a new line.
-console.log(parseFloat(double)+d);
+console.log((parseFloat(double) + d).toFixed(1));
+
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
-console.log(s + string);
+console.log(s+string)
+    
 }
