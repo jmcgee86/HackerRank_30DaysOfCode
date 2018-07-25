@@ -5,26 +5,30 @@ using System.IO;
 class Solution 
 {
     //Write your code here
-    var stack = new list<char>();
-    var queue = new list<char>();
-    
+    List<char> charStack = new List<char>();
+    List<char> charQueue = new List<char>();
+
     public void pushCharacter(char ch)
     {
-        
+    charStack.Insert(0,ch); 
     }
     
     public void enqueueCharacter(char ch)
     {
-        
+        charQueue.Add(ch);
     }
     
     public char popCharacter() 
     {
-        
+        var topStack = charStack[0];
+        charStack.RemoveAt(0);
+        return topStack;
     }
     public char dequeueCharacter() 
     {
-        
+        var topQueue = charQueue[0];
+        charQueue.RemoveAt(0);
+        return topQueue;
     }
     
 }
