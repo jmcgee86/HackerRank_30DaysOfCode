@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    
+    static int calcFine(int d1, int m1, int y1, int d2, int m2, int y2)
+    {
+        if (y2<y1)
+            return 10000;
+        else if (y1<y2)
+            return 0;
+        else if (m2<m1)
+            return 500*(m1-m2);
+        else if (m2==m1 && d2<d1)
+            return 15 * (d1-d2);
+        else 
+            return 0; 
+    }
+    
+    static void Main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        
+        string[] d1M1Y1 = Console.ReadLine().Split(' ');
+
+        int d1 = Convert.ToInt32(d1M1Y1[0]);
+
+        int m1 = Convert.ToInt32(d1M1Y1[1]);
+
+        int y1 = Convert.ToInt32(d1M1Y1[2]);
+
+        string[] d2M2Y2 = Console.ReadLine().Split(' ');
+
+        int d2 = Convert.ToInt32(d2M2Y2[0]);
+
+        int m2 = Convert.ToInt32(d2M2Y2[1]);
+
+        int y2 = Convert.ToInt32(d2M2Y2[2]);
+
+        int result = calcFine(d1, m1, y1, d2, m2, y2);
+        
+        Console.WriteLine(result);
+    }
+}
